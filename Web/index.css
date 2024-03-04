@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  .bg-photo {
+    background-image: url('../Images/BG.jpg'); /* Replace 'background.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Text color on top of the background */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Optional: Add additional styles for your content */
+  .bg-photo h1 {
+    font-size: 3rem;
+  }
+  
+  .bg-photo p {
+    font-size: 1.5rem;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    height: 100%;
+    background-color: #b1b1b16c; /* Semi-transparent black background */
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+  }
