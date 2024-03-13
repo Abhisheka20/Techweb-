@@ -70,15 +70,11 @@ body, html {
   color: burlywood;
 }
 
-#container, #image, #content{
+#container, #image, #content, #container2, #image2, #content2, #container3, #image3, #content3, #container4, #image4, #content4{
   box-sizing: border-box;
 }
 
-#container2, #image2, #content2{
-  box-sizing: border-box;
-}
-
-#container{
+#container, #container3{
   height: 50vh;
   padding: 25px;
   padding-bottom: 25px;
@@ -86,7 +82,7 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-#image{
+#image, #image3{
   display: inline;
   float: left;
   width: 40%;
@@ -95,14 +91,14 @@ body, html {
   background-color: red;
 }
 
-#content{
+#content, #content3{
   display: inline;
   float: right;
   width: 55%;
   height: 45vh;
 }
 
-#container2{
+#container2, #container4{
   height: 50vh;
   padding: 25px;
   padding-bottom: 25px;
@@ -110,7 +106,7 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-#image2{
+#image2, #image4{
   display: inline;
   float: right;
   width: 40%;
@@ -119,7 +115,7 @@ body, html {
   background-color: red;
 }
 
-#content2{
+#content2, #content4{
   display: inline;
   float: left;
   width: 55%;
@@ -130,6 +126,22 @@ body, html {
   font-size: larger;
 }
 
-#p2{
-  font-size: larger;
+.container2{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 48px; 
+  /* align-items: center;  */
+  height: 100vh; 
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#image1-2, #image2-2, #image3-2{
+  height: 40vh;
+  background-color: red;
+  border-radius: 50px;
+  margin-top: 48px; 
 }
