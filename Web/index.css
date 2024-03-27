@@ -8,10 +8,9 @@ body, html {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-  
+
 .content {
-  /* flex: 1; */
-  margin-left: 170px;
+  margin-left: 100px;
 }
 
 #head{
@@ -36,32 +35,39 @@ body, html {
   
 .sidebar {
   position: fixed;
+  display: grid;
+  grid-template-columns: auto;
+  width: 50px;
   top: 1rem;
   left: 1rem;
   bottom: 1rem;
   background-color: #b1b1b16c; /* Semi-transparent black background */
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   backdrop-filter: blur(15px);
   border-radius: 30px;
   text-align: center;
 }
   
+.sidebar div{
+  width: 50px;
+}
+
 .sidebar ul {
   list-style-type: none;
-  padding: 0;
 }
-  
-.sidebar a {
-  margin-bottom: 10px;
+
+.sidebar i{
+  font-size: 30px;
 }
-  
+
 .sidebar a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
   display: block;
+  text-align: center;
   padding-top: 10vh;
-  padding-bottom: 10vh;
   font-family: Arial, sans-serif;
   transition: color 0.3s ease;
 }
@@ -70,15 +76,34 @@ body, html {
   color: burlywood;
 }
 
-#container, #image, #content{
+.sidebar span{
+  margin-left: -50px;
+  background-color: azure;
+}
+.sidebar .nav-tip{
+  position:relative;
+  display: block;
+  left: 200px;
+  top: -10%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset;
+  border-radius: .6rem;
+  padding: .4rem 1.2rem;
+  opacity: 0;
+  color: azure;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar :hover .nav-tip{
+  opacity: 1 ;
+  color: black;
+}
+
+#container, #image, #content, #container2, #image2, #content2, #container3, #image3, #content3, #container4, #image4, #content4{
   box-sizing: border-box;
 }
 
-#container2, #image2, #content2{
-  box-sizing: border-box;
-}
-
-#container{
+#container, #container3{
   height: 50vh;
   padding: 25px;
   padding-bottom: 25px;
@@ -86,7 +111,7 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-#image{
+#image, #image3{
   display: inline;
   float: left;
   width: 40%;
@@ -95,14 +120,14 @@ body, html {
   background-color: red;
 }
 
-#content{
+#content, #content3{
   display: inline;
   float: right;
   width: 55%;
   height: 45vh;
 }
 
-#container2{
+#container2, #container4{
   height: 50vh;
   padding: 25px;
   padding-bottom: 25px;
@@ -110,7 +135,7 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
-#image2{
+#image2, #image4{
   display: inline;
   float: right;
   width: 40%;
@@ -119,7 +144,7 @@ body, html {
   background-color: red;
 }
 
-#content2{
+#content2, #content4{
   display: inline;
   float: left;
   width: 55%;
@@ -130,6 +155,77 @@ body, html {
   font-size: larger;
 }
 
-#p2{
-  font-size: larger;
+.container2{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 48px; 
+  /* align-items: center;  */
+  height: 100vh; 
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#image1-2, #image2-2, #image3-2{
+  height: 40vh;
+  background-color: red;
+  border-radius: 50px;
+  margin-top: 48px; 
+}
+
+/* Customization for mobile device resolution */
+@media only screen and (max-width:600px) {
+  #head{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Text color on top of the background */
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    bottom: 0;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .sidebar .nav-tip{
+    display: none;
+  }
+  .sidebar {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    position: absolute;
+    height: 10vh;
+    width: 100%;
+    display: table;
+    position: fixed;
+    padding-left: 0;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #b1b1b16c; /* Semi-transparent black background */
+  }
+
+  .sidebar i{
+    font-size: min(max(100px, 10.5vw), 20px);
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    padding: 0;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+    color: antiquewhite;
+    transition: color 0.3s ease;
+  }
+
+  .sidebar div{
+    width: 100%;
+  }
 }
